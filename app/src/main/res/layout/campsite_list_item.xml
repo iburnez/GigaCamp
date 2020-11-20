@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/campsiteListItemLogo"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/gigacamp_logo_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/campsiteListItemSiteNumberLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="Site Number: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/campsiteListItemLogo"
+        app:layout_constraintTop_toTopOf="@id/campsiteListItemLogo"
+        app:layout_constraintBottom_toTopOf="@id/campsiteListItemPriceLabel"/>
+
+    <TextView
+        android:id="@+id/campsiteListItemSiteNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="C1"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/campsiteListItemSiteNumberLabel"
+        app:layout_constraintTop_toTopOf="@id/campsiteListItemSiteNumberLabel" />
+
+    <TextView
+        android:id="@+id/campsiteListItemPriceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Price per night: "
+        app:layout_constraintTop_toBottomOf="@id/campsiteListItemSiteNumberLabel"
+        app:layout_constraintBottom_toBottomOf="@id/campsiteListItemLogo"
+        app:layout_constraintLeft_toLeftOf="@id/campsiteListItemSiteNumberLabel"/>
+
+    <TextView
+        android:id="@+id/campsiteListItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="$25"
+        app:layout_constraintTop_toTopOf="@id/campsiteListItemPriceLabel"
+        app:layout_constraintLeft_toRightOf="@id/campsiteListItemPriceLabel"/>
+
+    <Button
+        android:id="@+id/campsiteListItemResButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:text="RESERVE"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/campsiteListItemLogo"
+        app:layout_constraintLeft_toRightOf="@id/campsiteListItemSiteNumber"
+        app:layout_constraintTop_toTopOf="@id/campsiteListItemLogo" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/campsiteListItemLogo"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/resListItemImage"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/gigacamp_logo_green"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/resListItemCampGroundName"
+        android:layout_width="wrap_content"
+        android:maxWidth="275dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Camground Name"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/resListItemCampGroundPhoneLabel"
+        app:layout_constraintLeft_toRightOf="@id/resListItemImage"
+        app:layout_constraintTop_toTopOf="@id/resListItemImage" />
+
+    <TextView
+        android:id="@+id/resListItemCampGroundPhoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Camground Phone:"
+        android:textSize="14dp"
+        app:layout_constraintTop_toBottomOf="@id/resListItemCampGroundName"
+        app:layout_constraintStart_toStartOf="@id/resListItemCampGroundName"
+        app:layout_constraintBottom_toTopOf="@id/resListItemArrivalLabel"/>
+
+    <TextView
+        android:id="@+id/resListItemCampGroundPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="555-666-7788"
+        android:textSize="14dp"
+        app:layout_constraintTop_toTopOf="@id/resListItemCampGroundPhoneLabel"
+        app:layout_constraintStart_toEndOf="@id/resListItemCampGroundPhoneLabel"
+        />
+
+    <TextView
+        android:id="@+id/resListItemArrivalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Arrival Date:"
+        android:textSize="14dp"
+        app:layout_constraintTop_toBottomOf="@id/resListItemCampGroundPhoneLabel"
+        app:layout_constraintStart_toStartOf="@id/resListItemCampGroundPhoneLabel"
+        app:layout_constraintBottom_toTopOf="@id/resListItemDepartureLabel"/>
+
+    <TextView
+        android:id="@+id/resListItemArrival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="01/01/2021"
+        android:textSize="14dp"
+        app:layout_constraintTop_toTopOf="@id/resListItemArrivalLabel"
+        app:layout_constraintStart_toEndOf="@id/resListItemArrivalLabel"
+        />
+
+    <TextView
+        android:id="@+id/resListItemDepartureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Departure Date:"
+        android:textSize="14dp"
+        app:layout_constraintTop_toBottomOf="@id/resListItemArrivalLabel"
+        app:layout_constraintStart_toStartOf="@id/resListItemArrivalLabel"
+        app:layout_constraintBottom_toTopOf="@id/resListItemDiv"/>
+
+    <TextView
+        android:id="@+id/resListItemDeparture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="01/07/2021"
+        android:textSize="14dp"
+        app:layout_constraintTop_toTopOf="@id/resListItemDepartureLabel"
+        app:layout_constraintStart_toEndOf="@id/resListItemDepartureLabel"
+        />
+
+    <View
+        android:id="@+id/resListItemDiv"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@id/resListItemDepartureLabel"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

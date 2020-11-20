@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsReservationsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/detailReservationToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/detailReservationBackButton"
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_marginLeft="15dp"
+        android:onClick="backButton"
+        app:layout_constraintBottom_toBottomOf="@id/detailReservationToolbar"
+        app:layout_constraintStart_toStartOf="@id/detailReservationToolbar"
+        app:layout_constraintTop_toTopOf="@id/detailReservationToolbar" />
+
+    <ImageView
+        android:id="@+id/detailReservationGigaCampLogo"
+        android:layout_width="48dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintLeft_toRightOf="@id/detailReservationBackButton"
+        app:layout_constraintTop_toTopOf="@id/detailReservationToolbar"
+        app:layout_constraintBottom_toBottomOf="@id/detailReservationToolbar"
+        app:srcCompat="@drawable/ic_action_name" />
+
+    <TextView
+        android:id="@+id/detailReservationGigaCampName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GigaCamp"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toRightOf="@id/detailReservationGigaCampLogo"
+        app:layout_constraintTop_toTopOf="@id/detailReservationToolbar"
+        app:layout_constraintBottom_toBottomOf="@id/detailReservationToolbar"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/detailCampsiteCGName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Reservation Details"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detailReservationNumberLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:text="Site Number:"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/detailReservationNumberTimeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/detailReservationPriceLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Max Number of Campers"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/detailReservationPriceTimeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/detailReservationMaxGuestsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Price per night:"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/detailReservationMaxGuestsTimeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/detailReservationResNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Reservation Name:"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/detailReservationResName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/detailReservationResEmailLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Reservation Email:"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/detailReservationResEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/detailReservationResPhoneLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Reservation Phone Number:"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/detailReservationResPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/detailReservationResArrivalLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Arrival Date:"
+                android:textSize="18sp"
+                />
+
+            <DatePicker
+                android:id="@+id/detailReservationResArrival"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:inputType="date"
+                />
+
+            <TextView
+                android:id="@+id/detailReservationResDepartureLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Departure Date:"
+                android:textSize="18sp"
+                />
+
+            <DatePicker
+                android:id="@+id/detailReservationResDeparture"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:inputType="date"
+                />
+
+            <TextView
+                android:id="@+id/detailReservationResPriceLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Total Price:"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/detailReservationResPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:inputType="number" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp">
+
+                <Button
+                    android:id="@+id/detailReservationDeletBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="#DD2416"
+                    android:onClick="deleteReservation"
+                    android:text="Delete"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:id="@+id/detailReservationSaveBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/colorPrimary"
+                    android:onClick="updateReservation"
+                    android:text="SAVE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

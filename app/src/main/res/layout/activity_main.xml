@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/loginToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/loginGigaCampLogo"
+        android:layout_width="48dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/loginToolbar"
+        app:layout_constraintTop_toTopOf="@id/loginToolbar"
+        app:layout_constraintBottom_toBottomOf="@id/loginToolbar"
+        app:srcCompat="@drawable/ic_action_name" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GigaCamp"
+        android:layout_marginLeft="15dp"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toRightOf="@id/loginGigaCampLogo"
+        app:layout_constraintTop_toTopOf="@id/loginToolbar"
+        app:layout_constraintBottom_toBottomOf="@id/loginToolbar"
+        />
+
+    <TextView
+        android:id="@+id/LoginPageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="75dp"
+        android:text="Login"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginToolbar" />
+
+    <TextView
+        android:id="@+id/loginEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="@id/LoginPageLabel"
+        app:layout_constraintTop_toBottomOf="@id/LoginPageLabel" />
+
+    <EditText
+        android:id="@+id/loginEmailTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintLeft_toLeftOf="@id/loginEmailLabel"
+        app:layout_constraintTop_toBottomOf="@id/loginEmailLabel" />
+
+    <TextView
+        android:id="@+id/loginPasswordLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/loginEmailLabel"
+        app:layout_constraintTop_toBottomOf="@id/loginEmailTxt" />
+
+    <EditText
+        android:id="@+id/loginPasswordTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintLeft_toLeftOf="@id/loginPasswordLabel"
+        app:layout_constraintTop_toBottomOf="@id/loginPasswordLabel" />
+
+    <Button
+        android:id="@+id/LoginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:background="#169111"
+        android:onClick="login"
+        android:text="LOGIN"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="@id/loginPasswordTxt"
+        app:layout_constraintTop_toBottomOf="@id/loginPasswordTxt" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dont have an account yet?"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/LoginSignupButton" />
+
+    <Button
+        android:id="@+id/LoginSignupButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="#169111"
+        android:onClick="signup"
+        android:text="SIGNUP"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

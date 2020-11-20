@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_menu_allCampgrounds"
+        android:title="All Campgrounds" />
+    <item
+        android:id="@+id/main_menu_myCampgrounds"
+        android:title="My Camppgrounds" />
+    <item
+        android:id="@+id/main_menu_myReservations"
+        android:title="My Reservations" />
+    <item
+        android:id="@+id/main_menu_myAccount"
+        android:title="My Account" />
+
+</menu>

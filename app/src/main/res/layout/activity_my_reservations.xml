@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyReservationsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/myReservationsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/myReservationsBackButton"
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_marginLeft="15dp"
+        android:onClick="backButton"
+        app:layout_constraintBottom_toBottomOf="@id/myReservationsToolbar"
+        app:layout_constraintStart_toStartOf="@id/myReservationsToolbar"
+        app:layout_constraintTop_toTopOf="@id/myReservationsToolbar" />
+
+    <ImageView
+        android:id="@+id/myReservationsGigaCampLogo"
+        android:layout_width="48dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintLeft_toRightOf="@id/myReservationsBackButton"
+        app:layout_constraintTop_toTopOf="@id/myReservationsToolbar"
+        app:layout_constraintBottom_toBottomOf="@id/myReservationsToolbar"
+        app:srcCompat="@drawable/ic_action_name" />
+
+    <TextView
+        android:id="@+id/myReservationsGigaCampName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GigaCamp"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toRightOf="@id/myReservationsGigaCampLogo"
+        app:layout_constraintTop_toTopOf="@id/myReservationsToolbar"
+        app:layout_constraintBottom_toBottomOf="@id/myReservationsToolbar"
+        />
+
+    <TextView
+        android:id="@+id/myReservationsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="My Reservations"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/myReservationsToolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/myReservationsSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/myReservationsHeader">
+
+        <EditText
+            android:id="@+id/myReservationsSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Search"
+            android:inputType="text"
+            />
+        <Button
+            android:id="@+id/myReservationsSearchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:text="SEARCH"
+            android:onClick="searchReservations"
+            android:textSize="16dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFFFFF"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myReservationsResTypeBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/myReservationsSearchBar">
+
+        <TextView
+            android:id="@+id/myReservationsResType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Reservation Type:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <Spinner
+            android:id="@+id/myReservationsResTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/res_type_array"
+            android:spinnerMode="dropdown"
+            android:layout_marginRight="20dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myReservationsResStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/myReservationsResTypeBar">
+
+        <TextView
+            android:id="@+id/myReservationsResStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Reservation Status:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <Spinner
+            android:id="@+id/myReservationsResStatusSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/res_status_array"
+            android:spinnerMode="dropdown"
+            android:layout_marginRight="20dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myReservationsRecView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        app:layout_constraintTop_toBottomOf="@id/myReservationsResStatusBar"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCampsitesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addCampsitesToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/addCampsitesBackButton"
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_marginLeft="15dp"
+        android:onClick="backButton"
+        app:layout_constraintBottom_toBottomOf="@id/addCampsitesToolbar"
+        app:layout_constraintStart_toStartOf="@id/addCampsitesToolbar"
+        app:layout_constraintTop_toTopOf="@id/addCampsitesToolbar" />
+
+    <ImageView
+        android:id="@+id/addCampsitesGigaCampLogo"
+        android:layout_width="48dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintLeft_toRightOf="@id/addCampsitesBackButton"
+        app:layout_constraintTop_toTopOf="@id/addCampsitesToolbar"
+        app:layout_constraintBottom_toBottomOf="@id/addCampsitesToolbar"
+        app:srcCompat="@drawable/ic_action_name" />
+
+    <TextView
+        android:id="@+id/addCampsitesGigaCampName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GigaCamp"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toRightOf="@id/addCampsitesGigaCampLogo"
+        app:layout_constraintTop_toTopOf="@id/addCampsitesToolbar"
+        app:layout_constraintBottom_toBottomOf="@id/addCampsitesToolbar"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/addCampsitesHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="New Campground"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/addCampsitesNumberLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:text="How many campsites do you want to add to your campground?"
+            android:textSize="18sp"
+             />
+
+        <EditText
+            android:id="@+id/addCampsitesNumberTimeTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/addCampsitesPriceLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:text="What is the price per night to rent a campsite?"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/addCampsitesPriceTimeTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/addCampsitesMaxGuestsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:text="Maximum number of campers per campsite?"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/addCampsitesMaxGuestsTimeTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/addCampsitesSaveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/colorPrimary"
+            android:text="SAVE"
+            android:onClick="addCampsites"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

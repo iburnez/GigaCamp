@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GigaCamp</string>
+    <string-array name="res_status_array">
+        <item name="upcoming">Upcoming Reservations</item>
+        <item name="past">Past Reservations</item>
+    </string-array>
+    <string-array name="res_type_array">
+        <item name="travel">Travel  Reservations</item>
+        <item name="camphost">Camphost Reservations</item>
+    </string-array>
+    <string-array name="main_menu_array">
+        <item name="allcampgrounds">All Campgrounds</item>
+        <item name="mycampgrounds">My Campgrounds</item>
+        <item name="myreservations">My Reservations</item>
+        <item name="myaccount">My Account</item>
+    </string-array>
+
+</resources>
